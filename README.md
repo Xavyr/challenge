@@ -1,3 +1,26 @@
+# Set Up Guide (Local Dev)
+- git clone `https://github.com/Be-Water-Development/local-dev-docker-postgres` in order to have a seperate docker container running Postgres
+- From within root, run `docker compose up` -- don't worry about seeding anything
+
+# Set Up Guide (Challenge App)
+- git clone this repo
+- run `npm i` from root dir
+- run `npx prisma migrate dev` to apply the migration stack to the up and runnning postgres db
+- run `npm start` to turn the app on
+
+# Usage 
+Using postman or the like hit the POST route with a payload like this:
+{
+    "email": "avg@gmail.com",
+    "name": "avg",
+    "age": 33,
+    "carModel": "Tundra",
+    "yearsOfDrivingExperience": 8
+}
+
+This will return a userId -- hit the GET route like this: `localhost:3001/api/quotes/best-three?userId=PLANT_USER_ID`
+
+
 # challenge
 
 ## Node.js Backend Challenge: Insurance Policy Quote Integration
