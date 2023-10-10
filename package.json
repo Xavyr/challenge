@@ -1,0 +1,37 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "## Node.js Backend Challenge: Insurance Policy Quote Integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./server.ts",
+    "codegen:sql": "npx pgtyped -w -c config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pgtyped/cli": "^2.3.0",
+    "@types/body-parser": "^1.19.3",
+    "@types/express": "^4.17.18",
+    "@types/lodash": "^4.14.199",
+    "@types/node": "^20.8.4",
+    "@types/pg": "^8.10.4",
+    "miragejs": "^0.1.47",
+    "prisma": "^5.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@pgtyped/runtime": "^2.3.0",
+    "@prisma/client": "^5.4.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "node-cache": "^5.1.2",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.1"
+  }
+}
