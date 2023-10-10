@@ -77,7 +77,6 @@ app.get("/api/quotes/best-three", async (req: Request, res: Response) => {
   try {
     //@ts-ignore
     const bestThree = await quoteService.getBestThreeQuotesByUserId(userId);
-    console.log(bestThree)
     myCache.set(JSON.stringify(userId), bestThree);
     res.status(200).json(bestThree);
     return;
@@ -91,3 +90,5 @@ app.get("/api/quotes/best-three", async (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app

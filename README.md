@@ -6,7 +6,10 @@
 - git clone this repo
 - run `npm i` from root dir
 - run `npx prisma migrate dev` to apply the migration stack to the up and runnning postgres db
+- run `json-server --watch ./json-server/generateInsuranceQuotes.js` in order to turn on the mock server
 - run `npm start` to turn the app on
+
+- run `npm run test` to run the tests
 
 # Usage 
 Using postman or the like hit the POST route with a payload like this:
